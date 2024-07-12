@@ -1,5 +1,6 @@
-import { GithubCommand } from './github-workflow/github-command';
+import { GithubCommandWorkflow } from "./github-workflow/github-command";
+import { IBaseCommandWorkflow } from "./interface-base-command-workflow";
 
-export const CommandWorkflows: Record<string, any> = {
-    'github': GithubCommand
+export const Workflows: Record<string, IBaseCommandWorkflow> = {
+    ...GithubCommandWorkflow,
 }
